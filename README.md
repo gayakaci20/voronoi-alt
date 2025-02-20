@@ -16,7 +16,7 @@ Avant de compiler et d'exécuter ce programme, assurez-vous d'avoir les élémen
 
 ### Installation des prérequis
 
-** 🍎 macOS (avec Homebrew) :**
+**🍎 macOS (avec Homebrew) :**
 
 ```bash
 brew install nasm
