@@ -2,6 +2,9 @@
 
 Ce projet implémente un visualiseur de diagramme de Voronoi en langage d'assemblage x86_64 en utilisant X11 pour l'affichage graphique. C'est une façon amusante d'explorer la géométrie computationnelle à bas niveau ! 
 
+![Exemple de diagramme de Voronoi](img/alt.png)
+*Exemple de visualisation d'un diagramme de Voronoi généré par le programme*
+
 ## Prérequis
 
 Avant de compiler et d'exécuter ce programme, assurez-vous d'avoir les éléments suivants installés :
@@ -53,6 +56,9 @@ Le programme vous demandera de :
 
 Une fenêtre s'ouvrira affichant le diagramme de Voronoi. Appuyez sur n'importe quelle touche pour quitter le programme. ✨
 
+![Différentes densités de points](img/alt2.png)
+*Exemple avec une densité différente de points et de centres*
+
 ## Fonctionnalités du programme ✨
 
 - **Génère des points aléatoires comme centres (affichés en rouge) :** Les graines des cellules de Voronoi. 
@@ -60,6 +66,12 @@ Une fenêtre s'ouvrira affichant le diagramme de Voronoi. Appuyez sur n'importe 
 - **Utilise X11 pour l'affichage graphique :** Accès direct au système de fenêtrage X. ️
 - **Prend en charge le redimensionnement de la fenêtre :** Le diagramme doit s'adapter aux changements de taille de la fenêtre (si implémenté). 
 - **Visualisation interactive :** Vous pouvez voir le diagramme se dessiner. 
+
+![Visualisation des connexions](img/alt3.png)
+*Visualisation des connexions entre les points cibles et leurs centres les plus proches*
+
+![Distribution des points](img/alt4.png)
+*Distribution uniforme des points et centres dans l'espace*
 
 ## Améliorations potentielles (pour le développement futur) 
 
