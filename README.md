@@ -6,7 +6,7 @@ Ce projet implémente un visualiseur de diagramme de Voronoi en langage d'assemb
 ![Exemple de diagramme de Voronoi](img/alt.png) ![Différentes densités de points](img/alt2.png) ![Visualisation des connexions](img/alt3.png) ![Distribution des points](img/alt4.png)
 
 
-## Prérequis
+## 🔧 Prérequis
 
 Avant de compiler et d'exécuter ce programme, assurez-vous d'avoir les éléments suivants installés :
 
@@ -16,14 +16,14 @@ Avant de compiler et d'exécuter ce programme, assurez-vous d'avoir les élémen
 
 ### Installation des prérequis
 
-**macOS (avec Homebrew) :**
+** 🍎 macOS (avec Homebrew) :**
 
 ```bash
 brew install nasm
 brew install xquartz  # Serveur X11 pour macOS
 ```
 
-**Ubuntu/Debian :**
+**🐧 Ubuntu/Debian :**
 
 ```bash
 sudo apt-get install nasm
@@ -57,7 +57,7 @@ Le programme vous demandera de :
 
 Une fenêtre s'ouvrira affichant le diagramme de Voronoi. Appuyez sur n'importe quelle touche pour quitter le programme. ✨
 
-## Fonctionnalités du programme ✨
+## ✨ Fonctionnalités du programme 
 
 - **Génère des points aléatoires comme centres (affichés en rouge) :** Les graines des cellules de Voronoi. 
 - **Crée des points cibles et les connecte à leur centre le plus proche :** Visualisation des régions de Voronoi.
