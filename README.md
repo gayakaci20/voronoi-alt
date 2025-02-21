@@ -1,81 +1,83 @@
-# ⚙️ Visualiseur de Diagramme de Voronoi en Assembleur 
+# ⚙️ Voronoi Diagram Viewer in Assembly  
 
-Ce projet implémente un visualiseur de diagramme de Voronoi en langage d'assemblage x86_64 en utilisant X11 pour l'affichage graphique. C'est une façon amusante d'explorer la géométrie computationnelle à bas niveau ! 
-*Exemple de visualisation d'un diagramme généré par le programme*
+This project implements a **Voronoi diagram viewer** in **x86_64 assembly**, using **X11** for graphical display. It's a fun way to explore computational geometry at a low level!  
 
-![Exemple de diagramme de Voronoi](img/alt.png) ![Différentes densités de points](img/alt2.png) ![Visualisation des connexions](img/alt3.png) ![Distribution des points](img/alt4.png)
+### Example Visualizations  
 
+![Example Voronoi Diagram](img/alt.png) ![Different Point Densities](img/alt2.png) ![Connection Visualization](img/alt3.png) ![Point Distribution](img/alt4.png)  
 
-## 🔧 Prérequis
+---
 
-Avant de compiler et d'exécuter ce programme, assurez-vous d'avoir les éléments suivants installés :
+## 🔧 Prerequisites  
 
-- **NASM (Netwide Assembler) :** L'assembleur que nous utiliserons.
-- **Bibliothèques de développement X11 :** Pour interagir avec le système de fenêtrage X.
-- **GCC (pour l'édition de liens) :** Pour combiner notre code assembleur avec les bibliothèques nécessaires.
+Before compiling and running this program, ensure you have the following installed:  
 
-### Installation des prérequis
+- **NASM (Netwide Assembler):** The assembler used for compilation.  
+- **X11 Development Libraries:** To interact with the X window system.  
+- **GCC (for linking):** To combine our assembly code with necessary libraries.  
 
-**🍎 macOS (avec Homebrew) :**
+### Installing Dependencies  
+
+**🍎 macOS (with Homebrew):**  
 
 ```bash
 brew install nasm
-brew install xquartz  # Serveur X11 pour macOS
-```
+brew install xquartz  # X11 server for macOS
+```  
 
-**🐧 Ubuntu/Debian :**
+**🐧 Ubuntu/Debian:**  
 
 ```bash
 sudo apt-get install nasm
 sudo apt-get install libx11-dev
-```
+```  
 
-## Compilation ️
+---
 
-Pour compiler le programme, utilisez les commandes suivantes :
+## ⚙️ Compilation  
+
+To compile the program, run the following commands:  
 
 ```bash
-# Assemble le fichier source
-nasm -f elf64 -o voronoi-alt.o voronoi-alt.asm
+# Assemble the source file
+nasm -f elf64 -o voronoi-alt.o voronoi-alt.asm  
 
-# Édition de liens avec la bibliothèque X11
+# Link with the X11 library
 gcc -o voronoi-alt voronoi-alt.o -lX11
-```
+```  
 
-## Exécution du programme 
+---
 
-Après la compilation, exécutez le programme avec :
+## 🚀 Running the Program  
+
+After compiling, execute the program with:  
 
 ```bash
 ./voronoi-alt
-```
+```  
 
-Le programme vous demandera de :
+The program will prompt you to:  
 
-1. Entrer le nombre de centres à générer (les "sites" du diagramme de Voronoi).
-2. Entrer le nombre de points cibles à connecter (les points que nous attribuerons au site le plus proche).
+1️⃣ Enter the number of generator points (Voronoi "sites").  
+2️⃣ Enter the number of target points to connect (points assigned to the nearest site).  
 
-Une fenêtre s'ouvrira affichant le diagramme de Voronoi. Appuyez sur n'importe quelle touche pour quitter le programme. ✨
+A window will open displaying the **Voronoi diagram**.  
+Press any key to **exit**. ✨  
 
-## ✨ Fonctionnalités du programme 
+---
 
-- **Génère des points aléatoires comme centres (affichés en rouge) :** Les graines des cellules de Voronoi. 
-- **Crée des points cibles et les connecte à leur centre le plus proche :** Visualisation des régions de Voronoi.
-- **Utilise X11 pour l'affichage graphique :** Accès direct au système de fenêtrage X. ️
-- **Prend en charge le redimensionnement de la fenêtre :** Le diagramme doit s'adapter aux changements de taille de la fenêtre (si implémenté). 
-- **Visualisation interactive :** Vous pouvez voir le diagramme se dessiner. 
+## ✨ Features  
 
-## Améliorations potentielles (pour le développement futur) 
+✔️ **Generates random points as Voronoi centers** (shown in red).  
+✔️ **Creates and connects points to their nearest center**, visualizing Voronoi regions.  
+✔️ **Uses X11 for graphical rendering** for efficient display.  
+✔️ **Supports window resizing** (if implemented).  
+✔️ **Interactive visualization** lets you see the diagram being drawn.   
 
-- **Coloration des régions de Voronoi :** Chaque région pourrait avoir une couleur distincte. 
-- **Calcul de distance plus efficace :** Explorez des algorithmes optimisés.
-- **Entrée utilisateur pour les points centraux :** Permettre à l'utilisateur de cliquer pour placer les centres. ️
-- **Enregistrement du diagramme dans un fichier :** Exporter la visualisation. 
-- **Zoom et panoramique :** Explorer le diagramme en détail. 
-- **Ajout de commentaires au code assembleur :** Faciliter la compréhension. 
+---
 
-## Remarques
+## ⚠️ Notes  
 
-- Le programme est conçu pour les systèmes 64 bits. 
-- Nécessite un serveur X11 en cours d'exécution (XQuartz sur macOS).
-- Le nombre maximal d'éléments peut être limité. Envisagez de rendre cela configurable. ⚠️
+- This program is designed for **64-bit systems**.  
+- Requires an **X11 server** to run (**XQuartz on macOS**).  
+- The **maximum number of points** may be limited—consider making this configurable.  
